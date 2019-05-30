@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'VT323', monospace;
+            font-size: 22px;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="styler.css">
+    <title>Ativide Formulario Profissional</title>
+</head>
+
+<body>
+    <fieldset>
+        <form name="formprofissional" action="/recebedados.php" method="post">
+
+            <!--
+Área "Dados pessoais"
+Nome completo
+[campo obrigatório]
+-->
+
+            <h2 class="area1">Dados Pessoais</h2>
+            
+            <p class="nome">
+                Nome Completo
+                <br>
+                <input type="text" name="nome" placeholder="Nome e sobrenome" size="35" required="required">
+            </p>
+            <!--
+Gênero
+[é possível selecionar apenas um dos valores]
+[valores: "Feminino" , "Masculino", "Outro" e "Prefiro não responder"]
+-->
+            <p class="genero">
+                Gênero
+                <br>
+                <select name="genero">
+                    <option value="select">Selecione uma opção</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="outros">Outros</option>
+                    <option value="noresponse">Prefiro não responder</option>
+                </select>
+            </p>
+            <!--
+Data de nascimento
+[possibilidade de seleção de uma data]
+-->
+            <p class="date">
+                Data de Nacimento
+                <br>
+                <input type="date" name="bday" min="1930-01-01"><br>
+            </p>
+            <!--
+E-mail
+[campo para e-mail]
+[campo obrigatório]
+-->
+
+            <p class="email">
+                E-mail
+                <br>
+                <input type="email" name="email" placeholder="informe seu email" required="required">
+            </p>
+
+            <!--
+URL site pessoal
+[​campo para URL]
+-->
+            <p class="url">
+                Página pessoal
+                <br>
+                <input type="url" name="url" placeholder="URL do seu site pessoal">
+            </p>
+            <!--
+Endereço (Rua, número e complemento)
+[campo obrigatório]
+-->
+            <p class="nome">
+                Endereço
+                <br>
+                <input type="text" name="nome" placeholder="Rua, número e complemento" size="35" required="required">
+            </p>
+
+            <!--
+Cidade
+[valores: "Alvorada", "Canoas", "Esteio", "Gravataí", 
+"Novo Hamburgo", "Passo Fundo", "Pelotas", "Porto Alegre", "São Leopoldo"]
+-->
+            <p class="cidade">
+                Município
+                <br>
+                <select name="cidade">
+                    <option value="select">Selecione uma opção</option>
+                    <option value="alvorada">Alvorada</option>
+                    <option value="canoas">Canoas</option>
+                    <option value="esteio">Esteio</option>
+                    <option value="gravataí">Gravataí</option>
+                    <option value="novohamburgo">Novo Hamburgo</option>
+                    <option value="passofundo">Passo Fundo</option>
+                    <option value="pelotas">Pelotas</option>
+                    <option value="portoalegre">Porto Alegre</option>
+                    <option value="saoleopoldo">São Leopoldo</option>
+                </select>
+            </p>
+            <!--
+Telefone
+[​campo para receber telefone]
+-->
+            <p class="tel">
+                Telefone de contato
+                <br>
+                <input type="tel" name="tel" pattern="[0-9]{11}" placeholder="Telefone" required="required">
+            </p>
+
+            <p class="reset">
+                <input type="reset" name="btnlimpar" value="Limpar Dados">
+            </p>
+
+            <!--
+
+Área de "Dados profissionais"
+Áreas de atuação
+[É possível selecionar um ou mais valores]
+[valores: "Design", "Desenvolvimento Front-end", "Desenvolvimento Back-end", "Engenharia de
+Software", "Banco de Dados", "Análise de Testes", ​"Análise de Negócios", "Manutenção"]
+
+-->
+            
+            <h2 class="area2">Dados Profissionais</h2>
+            Áreas de atuação
+            [Selecione uma ou mais opções]
+
+            <p class="areasatua">
+                <input type="checkbox" name="atua1" value="Design"> Design<br>
+                <input type="checkbox" name="atua2" value="Dev"> Desenvolvimento Front-end<br>
+                <input type="checkbox" name="atua3" value="Engsoft"> Engenharia de Software<br>
+                <input type="checkbox" name="atua4" value="Banco"> Banco de Dados<br>
+                <input type="checkbox" name="atua5" value="Testes"> Análise de Testes<br>
+                <input type="checkbox" name="atua6" value="Negocios"> Análise de Negócios<br>
+                <input type="checkbox" name="atua7" value="Bike"> Manutenção<br>
+            </p>
+
+            <!--
+Formação[datalist]
+[usar um elemento que permita filtrar um valor em um conjunto pré-definido de valores]
+[valores: "Ensino Fundamental", "Ensino Médio", "Ensino Superior", "Especialização", 
+"Mestrado", "Doutorado"]
+-->
+
+            <p class="forma">
+                Nível de formação
+                <br>
+                <select name="forma">
+                    <option value="select">Selecione uma opção</option>
+                    <option value="fundamental">Ensino Fundamental</option>
+                    <option value="medio">Ensino Médio</option>
+                    <option value="superior">Ensino Superior</option>
+                    <option value="especializa">Especialização</option>
+                    <option value="mestrado">Mestrado</option>
+                </select>
+            </p>
+
+            <!--
+Breve histórico profissional
+[usar um elemento que permita um espaço maior para entrada de texto]
+
+-->
+            <p class="historico">
+                Histórico profissional
+                <br>
+                <textarea name="mensagem" rows="10" cols="50"
+                    placeholder="Um breve hisórico de suas experiências profissionais"></textarea>
+            </p>
+
+            <!--
+Upload do currículo vitae
+[possibilidade de selecionar um arquivo]
+ -->
+            <p class="upload">
+                Curriculum Vitae [Selecione um arquivo]
+                <br>
+                <input type="file" name="img" multiple>
+            </p>
+            <!--
+Disponibilidade de horas semanais
+[usar um elemento para seleção de valores com as devidas validações]
+[valores: "10", "20", "30", "40"]
+-->
+
+            <p class="forma">
+                Disponibilidade [horas semanais]
+                <br>
+                <select name="forma">
+                    <option value="select">Selecione uma opção</option>
+                    <option value="10">10 horas</option>
+                    <option value="20">20 horas</option>
+                    <option value="30">30 horas</option>
+                    <option value="40">40 horas</option>
+                </select>
+            </p>
+
+            <!--
+
+Área de "Agendamento de entrevista"
+Data
+[possibilidade de seleção de uma data]
+[campo obrigatório]
+-->
+
+            
+            <h2 class="area3">Agendamento de entrevista</h2>
+
+            <p class="data">
+                Escolha uma data e um horário [entre 8:00 e 18:00]
+                <br>
+                <input type="date" required="required" name="date"
+                    min="2019-04-22" max="2024-02-18" />
+                <input type="time" required="required" name="hour"
+                    max="17:00"/>
+            </p>
+
+
+            <!--
+Elemento de controle para envio de dados do formulário ou 
+outro processo programado e ao invés de usar a imagem de botão padrão, 
+vai usar um arquivo de imagem criado por mim.
+-->
+
+            <p class="btnenviar">
+                <input type="image" alt="enviar" name="btnimage" src="imgbtn.png" width="144" height="56">               
+            </p>
+
+
+        </form>
+    </fieldset>
+
+    <!--
+
+
+
+-->
+
+
+</body>
+
+</html>
